@@ -12,7 +12,10 @@
   "license": "MIT",
   "dependencies": {
     "@hapi/hapi": "^20.2.1",
+    "@hapi/inert": "^6.0.4",
+    "@hapi/vision": "^6.1.0",
     "@types/validator": "^13.7.0",
+    "hapi-swagger": "^14.2.4",
     "pgtools": "^0.3.2",
     "sequelize": "^6.12.0"
   }
