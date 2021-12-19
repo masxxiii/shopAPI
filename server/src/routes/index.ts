@@ -4,5 +4,5 @@ import postRoute from "./postRoute";
 
 export default [
     ...getRoute,
-    // ...postRoute,
+    ...postRoute,
 ];

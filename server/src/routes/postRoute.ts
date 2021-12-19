@@ -1,4 +1,5 @@
 'use strict';
+import { BrandSchema, EmployeeSchema, ManagerSchema, OrderSchema, ProductSchema } from "../schemas/schemas";
 
 export default [
     {
@@ -9,7 +10,7 @@ export default [
             description: 'This endpoint will post brand data',
             tags: ['api', 'post_route'],
             validate: {
-                payload: '',
+                payload: BrandSchema,
             },
         },
     },
@@ -21,7 +22,7 @@ export default [
             description: 'This endpoint will post product data',
             tags: ['api', 'post_route'],
             validate: {
-                payload: '',
+                payload: ProductSchema,
             },
         },
     },
@@ -33,7 +34,7 @@ export default [
             description: 'This endpoint will post manager data',
             tags: ['api', 'post_route'],
             validate: {
-                payload: '',
+                payload: ManagerSchema,
             },
         },
     },
@@ -45,7 +46,7 @@ export default [
             description: 'This endpoint will post employee data',
             tags: ['api', 'post_route'],
             validate: {
-                payload: '',
+                payload: EmployeeSchema,
             },
         },
     },
@@ -57,7 +58,7 @@ export default [
             description: 'This endpoint will post order data',
             tags: ['api', 'post_route'],
             validate: {
-                payload: '',
+                payload: OrderSchema,
             },
         },
     },
