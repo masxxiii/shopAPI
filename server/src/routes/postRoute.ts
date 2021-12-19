@@ -1,11 +1,12 @@
 'use strict';
 import { BrandSchema, EmployeeSchema, ManagerSchema, OrderSchema, ProductSchema } from "../schemas/schemas";
+import { postBrand, postEmployee, postManager, postOrder, postProduct } from "../handlers/postRequests";
 
 export default [
     {
         method: 'POST',
         path: '/api/post/brands',
-        handler: '',
+        handler: postBrand,
         options: {
             description: 'This endpoint will post brand data',
             tags: ['api', 'post_route'],
@@ -17,7 +18,7 @@ export default [
     {
         method: 'POST',
         path: '/api/post/products',
-        handler: '',
+        handler: postProduct,
         options: {
             description: 'This endpoint will post product data',
             tags: ['api', 'post_route'],
@@ -29,7 +30,7 @@ export default [
     {
         method: 'POST',
         path: '/api/post/managers',
-        handler: '',
+        handler: postManager,
         options: {
             description: 'This endpoint will post manager data',
             tags: ['api', 'post_route'],
@@ -41,7 +42,7 @@ export default [
     {
         method: 'POST',
         path: '/api/post/employees',
-        handler: '',
+        handler: postEmployee,
         options: {
             description: 'This endpoint will post employee data',
             tags: ['api', 'post_route'],
@@ -53,7 +54,7 @@ export default [
     {
         method: 'POST',
         path: '/api/post/order',
-        handler: '',
+        handler: postOrder,
         options: {
             description: 'This endpoint will post order data',
             tags: ['api', 'post_route'],

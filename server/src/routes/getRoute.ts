@@ -1,6 +1,6 @@
 'use strict';
 
-import {getBrands, getEmployees, getManagers, getOrders, getProdcuts} from "../handlers/getRequests";
+import { getBrands, getEmployees, getManagers, getOrders, getProdcuts } from "../handlers/getRequests";
 
 export default [
     {

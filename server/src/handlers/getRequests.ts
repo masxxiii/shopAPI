@@ -1,6 +1,7 @@
 'use strict';
 import { Boom } from "@hapi/boom";
-import {error} from "./utils";
+import { OutputInterface } from "./Interfaces";
+import { error } from "./utils";
 import { Brand } from "../models/brand";
 import { Product } from "../models/product";
 import { Manager } from "../models/manager";
@@ -13,7 +14,7 @@ import { Order } from "../models/order";
  * @returns Object|Boom
  */
 export const getBrands = async ()
-    : Promise< Object | Boom> => {
+    : Promise< OutputInterface | Boom> => {
     try {
         return await Brand.findAll();
     } catch (e) {
@@ -28,7 +29,7 @@ export const getBrands = async ()
  * @returns Object|Boom
  */
 export const getProdcuts = async ()
-    : Promise< Object | Boom> => {
+    : Promise< OutputInterface | Boom> => {
     try {
         return await Product.findAll();
     } catch (e) {
@@ -43,7 +44,7 @@ export const getProdcuts = async ()
  * @returns Object|Boom
  */
 export const getManagers = async ()
-    : Promise< Object | Boom> => {
+    : Promise< OutputInterface | Boom> => {
     try {
         return await Manager.findAll();
     } catch (e) {
@@ -58,7 +59,7 @@ export const getManagers = async ()
  * @returns Object|Boom
  */
 export const getEmployees = async ()
-    : Promise< Object | Boom> => {
+    : Promise< OutputInterface | Boom> => {
     try {
         return await Employee.findAll();
     } catch (e) {
@@ -73,7 +74,7 @@ export const getEmployees = async ()
  * @returns Object|Boom
  */
 export const getOrders = async ()
-    : Promise< Object | Boom> => {
+    : Promise< OutputInterface | Boom> => {
     try {
         return await Order.findAll();
     } catch (e) {
