@@ -17,7 +17,7 @@ export const Brand = sequelizeDB.define('Brand', {
         allowNull: false
     },
     rating: {
-        type: DataTypes.NUMBER,
+        type: DataTypes.INTEGER,
         allowNull: false
     },
 },{

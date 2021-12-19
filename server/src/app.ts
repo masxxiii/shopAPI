@@ -1,7 +1,8 @@
 'use strict';
 const Hapi = require('@hapi/hapi');
-const { createDatabase } = require("./config/database");
-import {connectSequelize, disconnectSequelize} from "./config/sequelize";
+const { createDatabase, dropDatabase } = require("./config/database");
+import { connectSequelize, disconnectSequelize } from "./config/sequelize";
+import { createTables } from "./config/tables";
 
 
 /**
@@ -19,7 +20,8 @@ const startServer = async () => {
 
     //Internal function calls
     // await createDatabase();
-    // await connectSequelize();
+    await connectSequelize();
+    await createTables();
 
 };
 
