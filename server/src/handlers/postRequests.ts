@@ -14,10 +14,10 @@ import { PostBrand, PostEmployee, PostManager, PostOrder, PostProduct } from "./
  * @function postBrand
  * @returns Object|Boom
  */
-export const postBrand = async ({ params, }: RequestOrig)
+export const postBrand = async ({ payload, }: RequestOrig)
     : Promise< Object | Boom> => {
 
-    const { id, Name, country, rating } = <PostBrand> params;
+    const { id, Name, country, rating } = <PostBrand> payload;
 
     try {
         await Brand.create({
@@ -38,10 +38,10 @@ export const postBrand = async ({ params, }: RequestOrig)
  * @function postProduct
  * @returns Object|Boom
  */
-export const postProduct = async ({ params, }: RequestOrig)
+export const postProduct = async ({ payload, }: RequestOrig)
     : Promise< Object | Boom> => {
 
-    const { id, BrandId, Name, supplier } = <PostProduct> params;
+    const { id, BrandId, Name, supplier } = <PostProduct> payload;
 
     try {
         await Product.create({
@@ -62,10 +62,10 @@ export const postProduct = async ({ params, }: RequestOrig)
  * @function postManager
  * @returns Object|Boom
  */
-export const postManager = async ({ params, }: RequestOrig)
+export const postManager = async ({ payload, }: RequestOrig)
     : Promise< Object | Boom> => {
 
-    const { id, Name, Surname, Age } = <PostManager> params;
+    const { id, Name, Surname, Age } = <PostManager> payload;
 
     try {
         await Manager.create({
@@ -86,10 +86,10 @@ export const postManager = async ({ params, }: RequestOrig)
  * @function postEmployee
  * @returns Object|Boom
  */
-export const postEmployee = async ({ params, }: RequestOrig)
+export const postEmployee = async ({ payload, }: RequestOrig)
     : Promise< Object | Boom> => {
 
-    const { id, ManagerId, Name, Surname, Age } = <PostEmployee> params;
+    const { id, ManagerId, Name, Surname, Age } = <PostEmployee> payload;
 
     try {
         await Employee.create({
@@ -111,10 +111,10 @@ export const postEmployee = async ({ params, }: RequestOrig)
  * @function postOrder
  * @returns Object|Boom
  */
-export const postOrder = async ({ params, }: RequestOrig)
+export const postOrder = async ({ payload, }: RequestOrig)
     : Promise< Object | Boom> => {
 
-    const { id, EmployeeId, ProductId, total } = <PostOrder> params;
+    const { id, EmployeeId, ProductId, total } = <PostOrder> payload;
 
     try {
         await Order.create({
