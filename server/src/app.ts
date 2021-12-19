@@ -1,6 +1,7 @@
 'use strict';
 const Hapi = require('@hapi/hapi');
 const { createDatabase } = require("./config/database");
+import {connectSequelize, disconnectSequelize} from "./config/sequelize";
 
 
 /**
@@ -17,16 +18,18 @@ const startServer = async () => {
     console.log('[Server running on %s]', server.info.uri);
 
     //Internal function calls
-    await createDatabase();
+    // await createDatabase();
+    // await connectSequelize();
 
 };
 
 /**
  * Emits an event whenever a promise is rejected and catches error
  */
-process.on('unhandledRejection', (err) => {
+process.on('unhandledRejection', async (err) => {
 
     console.log(err);
+    await disconnectSequelize();
     process.exit(1);
 });
 
