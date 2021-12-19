@@ -3,6 +3,7 @@ const Hapi = require('@hapi/hapi');
 const { createDatabase, dropDatabase } = require("./config/database");
 import { connectSequelize, disconnectSequelize } from "./config/sequelize";
 import { createTables } from "./config/tables";
+import routes from "./routes/index"
 
 
 /**
@@ -22,6 +23,9 @@ const startServer = async () => {
     // await createDatabase();
     await connectSequelize();
     await createTables();
+
+    //adding routes
+    server.route(routes);
 
 };
 
