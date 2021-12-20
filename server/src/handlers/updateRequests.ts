@@ -20,12 +20,13 @@ export const updateBrand = async ({ payload, }: RequestOrig)
     const { id, Name, country, rating } = <PostBrand> payload;
 
     try {
-        await Brand.update({
-            id,
+        const brand = await Brand.findOne({ where: { id, } });
+        brand.set({
             Name,
             country,
-            rating
-        });
+            rating,
+        })
+        brand.save();
         return output({ message: 'Brand updated successfully' });
     } catch (e) {
         console.log('[ERROR]',e);
@@ -44,12 +45,13 @@ export const updateProduct = async ({ payload, }: RequestOrig)
     const { id, BrandId, Name, supplier } = <PostProduct> payload;
 
     try {
-        await Product.update({
-            id,
+        const product = await Product.findOne({ where: { id, }});
+        product.set({
             BrandId,
             Name,
             supplier
         });
+        product.save();
         return output({ message: 'Product updated successfully' });
     } catch (e) {
         console.log('[ERROR]',e);
@@ -68,12 +70,13 @@ export const updateManager = async ({ payload, }: RequestOrig)
     const { id, Name, Surname, Age } = <PostManager> payload;
 
     try {
-        await Manager.update({
-            id,
+        const manager = await Manager.findOne({ where: { id, }});
+        manager.set({
             Name,
             Surname,
             Age
         });
+        manager.save();
         return output({ message: 'Manager updated successfully' });
     } catch (e) {
         console.log('[ERROR]',e);
@@ -92,13 +95,14 @@ export const updateEmployee = async ({ payload, }: RequestOrig)
     const { id, ManagerId, Name, Surname, Age } = <PostEmployee> payload;
 
     try {
-        await Employee.update({
-            id,
+        const employee = await Employee.findOne({ where: { id, } });
+        employee.set({
             ManagerId,
             Name,
             Surname,
             Age
         });
+        employee.save();
         return output({ message: 'Employee updated successfully' });
     } catch (e) {
         console.log('[ERROR]',e);
@@ -117,12 +121,13 @@ export const updateOrder = async ({ payload, }: RequestOrig)
     const { id, EmployeeId, ProductId, total } = <PostOrder> payload;
 
     try {
-        await Order.update({
-            id,
+        const order = await Order.findOne({ where: { id, } });
+        order.set({
             EmployeeId,
             ProductId,
             total
         });
+        order.save();
         return output({ message: 'Order update successfully' });
     } catch (e) {
         console.log('[ERROR]',e);
