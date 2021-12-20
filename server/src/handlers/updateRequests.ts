@@ -20,16 +20,16 @@ export const updateBrand = async ({ payload, }: RequestOrig)
     const { id, Name, country, rating } = <PostBrand> payload;
 
     try {
-        await Brand.create({
+        await Brand.update({
             id,
             Name,
             country,
             rating
         });
-        return output({ message: 'Brand created successfully' });
+        return output({ message: 'Brand updated successfully' });
     } catch (e) {
         console.log('[ERROR]',e);
-        return error(5000, "Error in creating a Brand",{});
+        return error(5000, "Error in updating Brand",{});
     }
 }
 
@@ -44,16 +44,16 @@ export const updateProduct = async ({ payload, }: RequestOrig)
     const { id, BrandId, Name, supplier } = <PostProduct> payload;
 
     try {
-        await Product.create({
+        await Product.update({
             id,
             BrandId,
             Name,
             supplier
         });
-        return output({ message: 'Product created successfully' });
+        return output({ message: 'Product updated successfully' });
     } catch (e) {
         console.log('[ERROR]',e);
-        return error(5000, "Error in creating a Product",{});
+        return error(5000, "Error in updating Product",{});
     }
 }
 
@@ -68,16 +68,16 @@ export const updateManager = async ({ payload, }: RequestOrig)
     const { id, Name, Surname, Age } = <PostManager> payload;
 
     try {
-        await Manager.create({
+        await Manager.update({
             id,
             Name,
             Surname,
             Age
         });
-        return output({ message: 'Manager created successfully' });
+        return output({ message: 'Manager updated successfully' });
     } catch (e) {
         console.log('[ERROR]',e);
-        return error(5000, "Error in creating a Manager",{});
+        return error(5000, "Error in updating Manager",{});
     }
 }
 
@@ -92,17 +92,17 @@ export const updateEmployee = async ({ payload, }: RequestOrig)
     const { id, ManagerId, Name, Surname, Age } = <PostEmployee> payload;
 
     try {
-        await Employee.create({
+        await Employee.update({
             id,
             ManagerId,
             Name,
             Surname,
             Age
         });
-        return output({ message: 'Employee created successfully' });
+        return output({ message: 'Employee updated successfully' });
     } catch (e) {
         console.log('[ERROR]',e);
-        return error(5000, "Error in creating an Employee",{});
+        return error(5000, "Error in updating Employee",{});
     }
 }
 
@@ -117,15 +117,15 @@ export const updateOrder = async ({ payload, }: RequestOrig)
     const { id, EmployeeId, ProductId, total } = <PostOrder> payload;
 
     try {
-        await Order.create({
+        await Order.update({
             id,
             EmployeeId,
             ProductId,
             total
         });
-        return output({ message: 'Order created successfully' });
+        return output({ message: 'Order update successfully' });
     } catch (e) {
         console.log('[ERROR]',e);
-        return error(5000, "Error in creating an Order",{});
+        return error(5000, "Error in updating Order",{});
     }
 }
