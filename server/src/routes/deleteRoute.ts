@@ -8,7 +8,7 @@ export default [
         path: '/api/delete/brands',
         handler: deleteBrand,
         options: {
-            description: 'This endpoint will post brand data',
+            description: 'This endpoint will delete brand data',
             tags: ['api', 'delete_route'],
             validate: {
                 payload: Joi.object({
@@ -24,7 +24,7 @@ export default [
         path: '/api/delete/products',
         handler: deleteProduct,
         options: {
-            description: 'This endpoint will post product data',
+            description: 'This endpoint will delete product data',
             tags: ['api', 'delete_route'],
             validate: {
                 payload: Joi.object({
@@ -40,7 +40,7 @@ export default [
         path: '/api/delete/managers',
         handler: deleteManager,
         options: {
-            description: 'This endpoint will post manager data',
+            description: 'This endpoint will delete manager data',
             tags: ['api', 'delete_route'],
             validate: {
                 payload: Joi.object({
@@ -56,7 +56,7 @@ export default [
         path: '/api/delete/employees',
         handler: deleteEmployee,
         options: {
-            description: 'This endpoint will post employee data',
+            description: 'This endpoint will delete employee data',
             tags: ['api', 'delete_route'],
             validate: {
                 payload: Joi.object({
@@ -72,7 +72,7 @@ export default [
         path: '/api/delete/order',
         handler: deleteOrder,
         options: {
-            description: 'This endpoint will post order data',
+            description: 'This endpoint will delete order data',
             tags: ['api', 'delete_route'],
             validate: {
                 payload: Joi.object({
