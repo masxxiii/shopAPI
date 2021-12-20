@@ -10,11 +10,11 @@ import { RequestOrig } from "hapi";
 import { PostBrand, PostEmployee, PostManager, PostOrder, PostProduct } from "./Interfaces";
 
 /**
- * Async function that adds a Brand.
- * @function postBrand
+ * Async function that updates a Brand.
+ * @function updateBrand
  * @returns Object|Boom
  */
-export const postBrand = async ({ payload, }: RequestOrig)
+export const updateBrand = async ({ payload, }: RequestOrig)
     : Promise< Object | Boom> => {
 
     const { id, Name, country, rating } = <PostBrand> payload;
@@ -34,11 +34,11 @@ export const postBrand = async ({ payload, }: RequestOrig)
 }
 
 /**
- * Async function that adds a Product.
- * @function postProduct
+ * Async function that updates a Product.
+ * @function updateProduct
  * @returns Object|Boom
  */
-export const postProduct = async ({ payload, }: RequestOrig)
+export const updateProduct = async ({ payload, }: RequestOrig)
     : Promise< Object | Boom> => {
 
     const { id, BrandId, Name, supplier } = <PostProduct> payload;
@@ -58,11 +58,11 @@ export const postProduct = async ({ payload, }: RequestOrig)
 }
 
 /**
- * Async function that adds a Manager.
- * @function postManager
+ * Async function that updates a Manager.
+ * @function updateManager
  * @returns Object|Boom
  */
-export const postManager = async ({ payload, }: RequestOrig)
+export const updateManager = async ({ payload, }: RequestOrig)
     : Promise< Object | Boom> => {
 
     const { id, Name, Surname, Age } = <PostManager> payload;
@@ -82,11 +82,11 @@ export const postManager = async ({ payload, }: RequestOrig)
 }
 
 /**
- * Async function that adds an Employee.
- * @function postEmployee
+ * Async function that updates an Employee.
+ * @function updateEmployee
  * @returns Object|Boom
  */
-export const postEmployee = async ({ payload, }: RequestOrig)
+export const updateEmployee = async ({ payload, }: RequestOrig)
     : Promise< Object | Boom> => {
 
     const { id, ManagerId, Name, Surname, Age } = <PostEmployee> payload;
@@ -107,11 +107,11 @@ export const postEmployee = async ({ payload, }: RequestOrig)
 }
 
 /**
- * Async function that adds an Order.
- * @function postOrder
+ * Async function that updates an Order.
+ * @function updateOrder
  * @returns Object|Boom
  */
-export const postOrder = async ({ payload, }: RequestOrig)
+export const updateOrder = async ({ payload, }: RequestOrig)
     : Promise< Object | Boom> => {
 
     const { id, EmployeeId, ProductId, total } = <PostOrder> payload;
