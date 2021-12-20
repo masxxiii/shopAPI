@@ -5,6 +5,10 @@ export interface OutputInterface {
     result?: object
 }
 
+export interface RemoveItem {
+    id: string,
+}
+
 export interface PostBrand {
     id: string,
     Name: string,

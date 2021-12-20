@@ -25,7 +25,7 @@ export const updateBrand = async ({ payload, }: RequestOrig)
             Name,
             country,
             rating,
-        })
+        });
         brand.save();
         return output({ message: 'Brand updated successfully' });
     } catch (e) {

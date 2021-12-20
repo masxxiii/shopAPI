@@ -5,7 +5,7 @@ import { updateBrand, updateEmployee, updateManager, updateOrder, updateProduct 
 export default [
     {
         method: 'PUT',
-        path: '/api/post/brands',
+        path: '/api/put/brands',
         handler: updateBrand,
         options: {
             description: 'This endpoint will update brand data',
@@ -17,7 +17,7 @@ export default [
     },
     {
         method: 'PUT',
-        path: '/api/post/products',
+        path: '/api/put/products',
         handler: updateProduct,
         options: {
             description: 'This endpoint will update product data',
@@ -29,7 +29,7 @@ export default [
     },
     {
         method: 'PUT',
-        path: '/api/post/managers',
+        path: '/api/put/managers',
         handler: updateManager,
         options: {
             description: 'This endpoint will update manager data',
@@ -41,7 +41,7 @@ export default [
     },
     {
         method: 'PUT',
-        path: '/api/post/employees',
+        path: '/api/put/employees',
         handler: updateEmployee,
         options: {
             description: 'This endpoint will update employee data',
@@ -53,7 +53,7 @@ export default [
     },
     {
         method: 'PUT',
-        path: '/api/post/order',
+        path: '/api/put/order',
         handler: updateOrder,
         options: {
             description: 'This endpoint will update order data',
