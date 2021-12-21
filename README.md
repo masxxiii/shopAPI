@@ -21,8 +21,6 @@ A backend API built in Hapijs that implements a basic database in postgreSQL for
 <img src="https://brandslogos.com/wp-content/uploads/images/sequelize-logo-vector.svg" img align="left" alt="sequelize.js" width="26px">
 
 
-<br />
-
 ---
 
 ## Getting started:
