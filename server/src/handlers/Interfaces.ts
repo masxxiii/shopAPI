@@ -9,6 +9,14 @@ export interface RemoveItem {
     id: string,
 }
 
+export interface BrandFilter {
+    id: string,
+}
+
+export interface EmployeeFilter {
+    ManagerId: string,
+}
+
 export interface PostBrand {
     id: string,
     Name: string,
