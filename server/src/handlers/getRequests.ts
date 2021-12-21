@@ -29,7 +29,7 @@ export const getBrands = async ()
  * @function getProducts
  * @returns Object|Boom
  */
-export const getProdcuts = async ()
+export const getProducts = async ()
     : Promise< OutputInterface | Boom> => {
     try {
         return await Product.findAll();
@@ -87,11 +87,12 @@ export const getOrders = async ()
 /**
  * Async function that returns Brand's name and country by id.
  * @function getBrandsFilter
+ * @param - parameters
  * @returns Object|Boom
  */
-export const getBrandsFilter = async ({ payload, }: RequestOrig)
+export const getBrandsFilter = async ({ params, }: RequestOrig)
     : Promise< OutputInterface | Boom> => {
-    const { id } = <BrandFilter> payload;
+    const { id } = <BrandFilter> params;
 
     try {
         return await Brand.findOne({
@@ -107,11 +108,12 @@ export const getBrandsFilter = async ({ payload, }: RequestOrig)
 /**
  * Async function that returns Employees' name and country by Manager's id.
  * @function getEmployeeFilter
+ * @param - parameters
  * @returns Object|Boom
  */
-export const getEmployeeFilter = async ({ payload, }: RequestOrig)
+export const getEmployeeFilter = async ({ params, }: RequestOrig)
     : Promise< OutputInterface | Boom> => {
-    const { ManagerId } = <EmployeeFilter> payload;
+    const { ManagerId } = <EmployeeFilter> params;
 
     try {
         return await Employee.findAll({

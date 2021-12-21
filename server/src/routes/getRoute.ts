@@ -6,7 +6,7 @@ import {
     getEmployees,
     getManagers,
     getOrders,
-    getProdcuts
+    getProducts
 } from "../handlers/getRequests";
 import * as Joi from 'joi';
 
@@ -23,7 +23,7 @@ export default [
     {
         method: 'GET',
         path: '/api/get/products',
-        handler: getProdcuts,
+        handler: getProducts,
         options: {
             description: 'This endpoint will fetch a list of products',
             tags: ['api', 'get_route'],
@@ -58,34 +58,30 @@ export default [
     },
     {
         method: 'GET',
-        path: '/api/get/filter/brands',
+        path: '/api/get/{id}/brands',
         handler: getBrandsFilter,
         options: {
             description: 'This endpoint will fetch unique brand name and country by id',
             tags: ['api', 'get_route_filter'],
             validate: {
-                payload: Joi.object({
-                    id: Joi
-                        .string()
-                        .required()
-                        .example('4f530883-2851-43ef-8104-09a61c69b8ac'),
+                params: Joi.object({
+                    id: Joi.string().required()
                 }),
-            },
+            }
         }
     },
     {
         method: 'GET',
-        path: '/api/filter/employees',
+        path: '/api/{ManagerId}/employees',
         handler: getEmployeeFilter,
         options: {
             description: 'This endpoint will fetch employee name and surname by manager id',
             tags: ['api', 'get_route_filter'],
-            payload: Joi.object({
-                ManagerId: Joi
-                    .string()
-                    .required()
-                    .example('4f530883-2851-43ef-8104-09a61c69b8ac'),
-            }),
+            validate: {
+                params: Joi.object({
+                    ManagerId: Joi.string().required()
+                }),
+            }
         }
     },
 ];
