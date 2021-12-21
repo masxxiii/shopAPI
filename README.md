@@ -20,8 +20,7 @@ A backend API built in Hapijs that implements a basic database in postgreSQL for
 <img src="https://www.postgresql.org/media/img/about/press/elephant.png" img align="left" alt="postgres.js" width="26px">
 <img src="https://brandslogos.com/wp-content/uploads/images/sequelize-logo-vector.svg" img align="left" alt="sequelize.js" width="26px">
 
-
----
+<br> </br>
 
 ## Getting started:
 
