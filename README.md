@@ -1,7 +1,7 @@
 # ShopAPI 
 
 <img src="https://cdn-icons-png.flaticon.com/512/3094/3094456.png" align="right"
-     alt="ShopAPI  logo by Masood Zafar" width="150" height="90">
+     alt="ShopAPI  logo by Masood Zafar" width="150" height="110">
 
 A backend API built in Hapijs that implements a basic database in postgreSQL for a chain of shops.
 
