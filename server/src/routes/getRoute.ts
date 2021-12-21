@@ -62,7 +62,7 @@ export default [
         handler: getBrandsFilter,
         options: {
             description: 'This endpoint will fetch unique brand name and country by id',
-            tags: ['api', 'get_route_filter'],
+            tags: ['api', 'get_route'],
             validate: {
                 params: Joi.object({
                     id: Joi.string().required()
@@ -76,7 +76,7 @@ export default [
         handler: getEmployeeFilter,
         options: {
             description: 'This endpoint will fetch employee name and surname by manager id',
-            tags: ['api', 'get_route_filter'],
+            tags: ['api', 'get_route'],
             validate: {
                 params: Joi.object({
                     ManagerId: Joi.string().required()

@@ -5,7 +5,7 @@ import { Product } from "../models/product";
 import { Manager } from "../models/manager";
 import { Employee } from "../models/employee";
 import { Order } from "../models/order";
-import { error, output } from "./utils";
+import {error, output, trigger} from "./utils";
 import { RequestOrig } from "hapi";
 import { PostBrand, PostEmployee, PostManager, PostOrder, PostProduct } from "./Interfaces";
 
@@ -27,6 +27,7 @@ export const updateBrand = async ({ payload, }: RequestOrig)
             rating,
         });
         brand.save();
+        trigger({ id, name: 'Brands'});
         return output({ message: 'Brand updated successfully' });
     } catch (e) {
         console.log('[ERROR]',e);

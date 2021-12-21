@@ -1,6 +1,6 @@
 'use strict';
 import { Boom } from "@hapi/boom";
-import { OutputInterface } from "./Interfaces";
+import {OutputInterface, TriggerInterface} from "./Interfaces";
 
 /**
  * Function for throwing error.
@@ -31,3 +31,14 @@ export const output = (res?: object): OutputInterface => ({
     ok: true,
     result: res,
 });
+
+/**
+ * Trigger function to be called.
+ * @function error
+ * @param data - The object containing data
+ * @returns void
+ */
+export const trigger = (data: object): void => {
+    const { id, name } = <TriggerInterface> data
+    console.log(`[The item with id: ${id} updated in ${name} table.]`);
+}

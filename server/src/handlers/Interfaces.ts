@@ -5,6 +5,11 @@ export interface OutputInterface {
     result?: object
 }
 
+export interface TriggerInterface {
+    id: string,
+    name: string
+}
+
 export interface RemoveItem {
     id: string,
 }
