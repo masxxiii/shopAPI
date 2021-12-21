@@ -15,10 +15,10 @@ A backend API built in Hapijs that implements a basic database in postgreSQL for
 
 <img align="left" alt="JavaScript" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" />
 <img align="left" alt="Node.js" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png" />
-<img src="./gitResources/5.png" img align="left" alt="Typescript" width="26px">
-<img src="./gitResources/2.png" img align="left" alt="Hapi.js" width="26px">
-<img src="./gitResources/3.png" img align="left" alt="postgres.js" width="26px">
-<img src="./gitResources/4.png" img align="left" alt="sequelize.js" width="26px">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1024px-Typescript_logo_2020.svg.png" img align="left" alt="Typescript" width="26px">
+<img src="https://raw.githubusercontent.com/hapijs/assets/master/images/hapi.png" img align="left" alt="Hapi.js" width="26px">
+<img src="https://www.postgresql.org/media/img/about/press/elephant.png" img align="left" alt="postgres.js" width="26px">
+<img src="https://brandslogos.com/wp-content/uploads/images/sequelize-logo-vector.svg" img align="left" alt="sequelize.js" width="26px">
 
 
 <br />
