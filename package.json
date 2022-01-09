@@ -1,1 +1,24 @@
-
+{
+  "name": "shopapi",
+  "version": "1.0.0",
+  "description": "An shop API built in Hapi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf ./js/ && tsc",
+    "start": "node build/src/app.js"
+  },
+  "author": "Masood Zafar",
+  "license": "MIT",
+  "dependencies": {
+    "@hapi/boom": "^9.1.4",
+    "@hapi/hapi": "^20.2.1",
+    "@hapi/inert": "^6.0.4",
+    "@hapi/vision": "^6.1.0",
+    "@types/hapi": "^18.0.7",
+    "@types/validator": "^13.7.0",
+    "hapi-swagger": "^14.2.4",
+    "pgtools": "^0.3.2",
+    "sequelize": "^6.12.0"
+  }
+}
