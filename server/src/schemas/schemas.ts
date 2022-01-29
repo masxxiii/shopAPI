@@ -29,9 +29,3 @@ export const EmployeeSchema = Joi.object({
     Age: Joi.string().required().example('40'),
 });
 
-export const OrderSchema = Joi.object({
-    id: Joi.string().required().example('4f530883-2851-43ef-8104-09a61c69b8ac'),
-    EmployeeId: Joi.string().required().example('65640d43-526f-45da-b86b-c34f431f1159'),
-    ProductId: Joi.string().required().example('bd26a2ed-87bb-4034-86d1-3c2769f5bf01'),
-    total: Joi.string().required().example('10000'),
-});
