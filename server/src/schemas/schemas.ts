@@ -1,11 +1,6 @@
 import * as Joi from 'joi';
 
-export const BrandSchema = Joi.object({
-    id: Joi.string().required().example('82892e71-d363-4f7f-8344-3d2d3932675b'),
-    Name: Joi.string().required().example('CocaCola'),
-    country: Joi.string().required().example('USA'),
-    rating: Joi.number().required().example('5'),
-});
+
 
 export const ProductSchema = Joi.object({
     id: Joi.string().required().example('bd26a2ed-87bb-4034-86d1-3c2769f5bf01'),
