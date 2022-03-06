@@ -3,18 +3,7 @@ import { BrandSchema, EmployeeSchema, ManagerSchema, OrderSchema, ProductSchema 
 import { postBrand, postEmployee, postManager, postOrder, postProduct } from "../handlers/postRequests";
 
 export default [
-    {
-        method: 'POST',
-        path: '/api/post/brands',
-        handler: postBrand,
-        options: {
-            description: 'This endpoint will post brand data',
-            tags: ['api', 'post_route'],
-            validate: {
-                payload: BrandSchema,
-            },
-        },
-    },
+
     {
         method: 'POST',
         path: '/api/post/products',
