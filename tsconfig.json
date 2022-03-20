@@ -6,7 +6,6 @@
     "sourceMap": false,
     "outDir": "build",
     "rootDir": "server",
-    "strict": true,
     "esModuleInterop": false,
   }
 }
