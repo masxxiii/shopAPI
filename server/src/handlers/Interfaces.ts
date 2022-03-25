@@ -1,9 +1,4 @@
-'use strict';
 
-export interface OutputInterface {
-    ok: boolean,
-    result?: object
-}
 
 export interface TriggerInterface {
     id: string,
