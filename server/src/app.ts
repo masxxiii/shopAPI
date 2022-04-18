@@ -3,7 +3,7 @@ const Hapi = require('@hapi/hapi');
 const HapiSwagger = require('hapi-swagger');
 const Inert = require('@hapi/inert');
 const Vision = require('@hapi/vision');
-
+const Pack = require('../../package.json');
 const { createDatabase, dropDatabase } = require("./config/database");
 import { connectSequelize, disconnectSequelize } from "./config/sequelize";
 import { createTables } from "./config/tables";
