@@ -1,4 +1,4 @@
-
+import * as Joi from 'joi';
 
 export const BrandSchema = Joi.object({
     id: Joi.string().required().example('82892e71-d363-4f7f-8344-3d2d3932675b'),
