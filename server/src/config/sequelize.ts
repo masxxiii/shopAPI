@@ -20,7 +20,7 @@ export const sequelizeDB = new Sequelize('shopDB', '', '', {
 export async function connectSequelize(): Promise<void> {
     try {
         await sequelizeDB.authenticate();
-        console.log('Connection to database has been established successfully.');
+        console.log('Connection to database established successfully.');
     } catch (err) {
         console.error('Unable to connect to the database.', err);
     }
