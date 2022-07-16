@@ -1,4 +1,5 @@
 'use strict';
+
 import { Boom } from "@hapi/boom";
 import { Brand } from "../models/brand";
 import { Product } from "../models/product";
