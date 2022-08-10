@@ -3,7 +3,6 @@ const { Sequelize } = require('sequelize');
 
 /**
  * Instantiating a sequelize object.
- *
  * @remarks
  * Notice the username and password may vary according to system.
  */
